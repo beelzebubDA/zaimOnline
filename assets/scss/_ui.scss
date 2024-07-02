@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Gilroy;
+    font-weight: 600;
+    src: url(../fonts/Gilroy-Semibold.woff), url(../fonts/Gilroy-Semibold.woff2);
+}
+
+
+h1,
+h2,
+h3,
+span,
+ul,
+ol,
+a,
+li,
+p,
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+@mixin mobile390 {
+    @media (max-width: 410px) {
+        @content;
+    }
+}
+
+@mixin mobile375 {
+    @media (max-width: 389px) {
+        @content;
+    }
+}
+
+@mixin mobile320 {
+    @media (max-width: 374px) {
+        @content;
+    }
+}
+
+body {
+    font-family: Gilroy !important;
+    font-weight: 600;
+    position: relative;
+    background: #FFF;
+    font-style: normal;
+    line-height: normal;
+}
+
+.container {
+    max-width: 426px;
+    margin: 0 auto;
+
+    @include mobile390 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.preloader {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background: #EF233C;
+    margin: auto;
+    max-width: 480px;
+
+    &.loaded {
+        display: none !important;
+    }
+
+    .preloader_block {
+        display: flex;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: #EF233C;
+        justify-content: center;
+        text-align: center;
+
+        .preloader_item {
+            padding-top: 65%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+            z-index: 4;
+
+            .preloader_title {
+                color: #FFF;
+                font-size: 48px;
+
+                @include mobile375 {
+                    font-size: 42px;
+                }
+
+                @include mobile320 {
+                    font-size: 30px;
+                }
+            }
+
+            .preloader_cubs {
+                height: 18px;
+                width: 122px;
+            }
+        }
+
+        .dot-flashing {
+            position: relative;
+            width: 10px !important;
+            height: 10px !important;
+            background-color: white;
+            color: white;
+            animation: dot-flashing 1s infinite linear alternate;
+            animation-delay: 1s;
+            display: flex;
+            width: 100%;
+
+            span {
+                display: block;
+                position: absolute;
+                width: 10px !important;
+                height: 10px !important;
+                background-color: white;
+                color: white;
+                animation: dot-flashing 1s infinite alternate;
+                animation-delay: 1s;
+
+                &.spanbefore {
+                    left: -15px;
+                    animation-delay: 0.5s;
+                }
+
+                &.spanafter {
+                    left: 15px;
+                    animation-delay: 1.5s;
+                }
+            }
+        }
+
+        .dot-flashing::before,
+        .dot-flashing::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot-flashing::before {
+            left: -30px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            color: white;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 0s;
+        }
+
+        .dot-flashing::after {
+            left: 30px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            color: white;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 1.7s;
+        }
+
+        @keyframes dot-flashing {
+            0% {
+                background-color: white;
+            }
+
+            50%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .preloader_bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 75%;
+        height: max-content;
+        object-fit: cover;
+        z-index: 2;
+    }
+
+    .preloader_coins {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        height: max-content;
+        width: 90%;
+    }
+}
+
+.main {
+    &_title {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        padding-top: 59px;
+
+        @include mobile320 {
+            font-size: 20px;
+        }
+    }
+
+    &_btn {
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 21px 7px 21px;
+        border-radius: 5px;
+        background: #EF233C;
+        width: max-content;
+
+        @include mobile320 {
+            font-size: 8px;
+            padding: 5px 15px 6px 15px;
+        }
+    }
+}
+
+.mainsec {
+    &_block {
+        display: flex;
+        height: 100%;
+
+        &.active {
+            min-height: auto !important;
+            height: 100%;
+
+            .mainsec_l {
+                height: 100vh;
+            }
+        }
+
+        &.actived {
+            min-height: auto !important;
+            height: 100%;
+        }
+    }
+
+    &_l {
+        background: #EF233C;
+        padding: 50px 10px 10px 10px;
+
+        @include mobile390 {
+            padding: 50px 5px 20px 5px;
+        }
+    }
+
+    &_l--links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    &_l--link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+
+        @include mobile375 {
+            font-size: 10px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+
+            @include mobile390 {
+                width: 38px;
+                height: 38px;
+            }
+
+            @include mobile375 {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+
+    &_r {
+        padding: 0 16px;
+        width: 80%;
+        height: 100%;
+    }
+}
+
+.consent {
+    color: #EF233C;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #EF233C;
+}
+
+.toback {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    gap: 10px;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        rotate: 180deg;
+
+        path {
+            fill: #EF233C;
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}

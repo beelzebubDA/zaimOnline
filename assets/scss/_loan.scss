@@ -1,0 +1,69 @@
+.loan {
+    display: none;
+    position: relative;
+    height: 100%;
+    padding-bottom: 100px;
+
+    &.active {
+        display: block;
+    }
+
+    .consent {
+        position: absolute;
+        bottom: 42px;
+    }
+
+    &_form {}
+
+    &_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    &_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 42px 0;
+        width: 100%;
+    }
+
+    &_input {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 25%;
+            left: 15px;
+        }
+        input {
+            color: black;
+            font-size: 12px;
+            border-radius: 50px;
+            width: 100%;
+            border: 0.5px solid #93969B;
+            background: #FFF;
+            padding: 8px 5px 8px 39px;
+
+            &::placeholder {
+                color: #93969B;
+            }
+        }
+    }
+
+    &_input--name {}
+
+    &_input--mail {}
+
+    &_input--tel {}
+
+    &_btn {
+        cursor: pointer;
+    }
+}

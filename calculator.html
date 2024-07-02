@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" id="header"></header>
+
+        <main class="main">
+            <section class="mainsec tarifs">
+                <div class="container">
+                    <div class="mainsec_block tarifs_block">
+                        <div class="mainsec_l">
+                            <div class="mainsec_l--links">
+                                <a href="index.html" class="mainsec_l--link">
+                                    <img src="./assets/imgs/main/tarifs.png" alt="mainsec icon">
+                                    <span>Тарифы</span>
+                                </a>
+                                <a href="contactus.html" class="mainsec_l--link">
+                                    <img src="./assets/imgs/main/contactus.png" alt="mainsec icon">
+                                    <span>Связь <br> с нами</span>
+                                </a>
+                                <a href="calculator.html" class="mainsec_l--link">
+                                    <img src="./assets/imgs/main/Calculator.png" alt="mainsec icon">
+                                    <span>Калькулятор</span>
+                                </a>
+                                <a href="ouroffices.html" class="mainsec_l--link">
+                                    <img src="./assets/imgs/main/location.png" alt="mainsec icon">
+                                    <span>Наши <br> офисы</span>
+                                </a>
+                                <a href="aboutus.html" class="mainsec_l--link">
+                                    <img src="./assets/imgs/main/Information.png" alt="mainsec icon">
+                                    <span>О Компании</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mainsec_r">
+                            <div class="calculator">
+                                <div class="calculator_block">
+                                    <h2 class="main_title">Калькулятор</h2>
+                                    <div class="calculator_items">
+                                        <div class="calculator_item">
+                                            <div class="calculator_item--t">
+                                                <span class="calculator_item--span">Сумма займа</span>
+                                                <span class="calculator_item--info"><span>0</span> ₽</span>
+                                            </div>
+                                            <div class="calculator_item--c">
+                                                <input class="input-range" type="range" name="sum" id="sum" step="1" min="1000" max="100000" value="1000">
+                                            </div>
+                                            <div class="calculator_item--b">
+                                                <span class="calculator_item--start">1 000</span>
+                                                <span class="calculator_item--end">100 000</span>
+                                            </div>
+                                        </div>
+                                        <div class="calculator_item">
+                                            <div class="calculator_item--t">
+                                                <span class="calculator_item--span">Ставка</span>
+                                                <span class="calculator_item--info"><span>0</span> %</span>
+                                            </div>
+                                            <div class="calculator_item--c">
+                                                <input class="input-range" type="range" name="bet" id="bet" step="1" min="1" max="100" value="1">
+                                            </div>
+                                            <div class="calculator_item--b">
+                                                <span class="calculator_item--start">1</span>
+                                                <span class="calculator_item--end">100%</span>
+                                            </div>
+                                        </div>
+                                        <div class="calculator_item">
+                                            <div class="calculator_item--t">
+                                                <span class="calculator_item--span">Срок</span>
+                                                <span class="calculator_item--info"><span>0</span> дней</span>
+                                            </div>
+                                            <div class="calculator_item--c">
+                                                <input class="input-range" type="range" name="limitation" id="limitation" step="1" min="1" max="100" value="1">
+                                            </div>
+                                            <div class="calculator_item--b">
+                                                <span class="calculator_item--start">1</span>
+                                                <span class="calculator_item--end">100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator_info">
+                                        <div class="calculator_info--item">
+                                            <span class="calculator_info--span">Ежемесячный платёж</span>
+                                            <span class="everyMonthsPrice calculator_info--change"><span>0</span> ₽</span>
+                                        </div>
+                                        <div class="calculator_info--item">
+                                            <span class="calculator_info--span">Переплата</span>
+                                            <span class="overPayment calculator_info--change"><span>0</span> ₽</span>
+                                        </div>
+                                        <div class="calculator_info--item">
+                                            <span class="calculator_info--span">Общая выплата</span>
+                                            <span class="totalPayments calculator_info--change"><span>0</span> ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        <div class="hidden">
+            <div class="loan_input--tel"></div>
+            <div class="loan_input--mail"></div>
+        </div>
+        
+        <footer class="footer" id="footer"></footer>
+    </div>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/calculator.js"></script>
+    <script src="./assets/js/jquery.inputmask.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(70, 70, 70, 0.70);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    &_block {
+        display: flex;
+        justify-content: center;
+        margin-top: 170px;
+    }
+
+    &_item {
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 29px 5px 19px 5px;
+
+        @include mobile320 {
+            gap: 10px;
+        }
+    }
+
+    &_title {
+        color: #EF233C;
+        text-align: center;
+        font-size: 24px;
+
+        @include mobile320 {
+            font-size: 20px;
+        }
+    }
+
+    &_span {
+        text-align: center;
+        font-size: 16px;
+
+        @include mobile320 {
+            font-size: 12px;
+        }
+    }
+
+    &_btn {}
+}
+
+.main {
+    &_btn {}
+}

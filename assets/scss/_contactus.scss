@@ -1,0 +1,47 @@
+.contactus {
+    &_form {
+
+    }
+
+    &_main {
+        height: 100%;
+
+        &.active {
+            .mainsec_l {
+                height: 100vh;
+            }
+        }
+    }
+
+    &_block {
+        .main_subtitle {
+            width: 100%;
+            margin-top: 7px;
+        }
+        
+        .contactus_text {
+            .contactus_textarea {
+                width: 100%;
+                height: 225px;
+                max-height: 225px;
+                min-height: 225px;
+                max-width: 301px;
+                min-width: 100%;
+                flex-shrink: 0;
+                border-radius: 10px;
+                border: 0.5px solid #93969B;
+                background: #FFF;
+                padding: 8px 10px 8px 16px;
+                color: black;
+                font-family: Gilroy;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: normal;
+
+                &::placeholder{
+                    color: #93969B;
+                }
+            }
+        }
+    }
+}
